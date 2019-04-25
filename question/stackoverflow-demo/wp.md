@@ -1,7 +1,6 @@
 我们利用如下命令对其进行编译
 
-```
-shell
+```shell
 ➜  stack-example gcc -m32 -fno-stack-protector stack_example.c -o stack_example 
 stack_example.c: In function ‘vulnerable’:
 stack_example.c:6:3: warning: implicit declaration of function ‘gets’ [-Wimplicit-function-declaration]
@@ -21,8 +20,7 @@ stack_example.c:(.text+0x27): 警告： the `gets' function is dangerous and sho
     PIE:      No PIE (0x8048000)
 ```
 Payload
-```
-python
+```python
 ##coding=utf8
 from pwn import *
 ## 构造与程序交互的对象
