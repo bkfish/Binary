@@ -13,7 +13,7 @@ int __cdecl main(int argc, const char **argv, const char **envp)
   return 0;
 }
 ```
-可以看出程序在主函数中使用了 gets 函数，显然存在栈溢出漏洞。此后又发现
+可以看出程序在主函数中使用了 gets 函数，显然存在栈溢出漏洞。
 
 ```asm
 .text:080485FD secure          proc near
